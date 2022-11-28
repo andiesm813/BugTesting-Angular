@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonsComponent } from './buttons/buttons.component';
-import { IgxDialogModule, IgxButtonModule, IgxRippleModule, IgxToggleModule, IgxIconModule, IgxDropDownModule, IgxListModule, IgxAvatarModule, IgxCardModule, IgxInputGroupModule, IgxNavigationDrawerModule } from '@infragistics/igniteui-angular';
+import { IgxButtonModule, IgxRippleModule, IgxIconModule, IgxToggleModule, IgxDropDownModule, IgxCardModule, IgxListModule, IgxAvatarModule, IgxDialogModule, IgxInputGroupModule, IgxNavigationDrawerModule } from '@infragistics/igniteui-angular';
 import { FormsModule } from '@angular/forms';
 import { SpaceBetweenComponent } from './space-between/space-between.component';
 import { CardsOpacityComponent } from './cards-opacity/cards-opacity.component';
@@ -25,15 +25,15 @@ import { DialogComponent } from './dialog/dialog.component';
     HammerModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    IgxDialogModule,
     IgxButtonModule,
     IgxRippleModule,
-    IgxToggleModule,
     IgxIconModule,
+    IgxToggleModule,
     IgxDropDownModule,
+    IgxCardModule,
     IgxListModule,
     IgxAvatarModule,
-    IgxCardModule,
+    IgxDialogModule,
     FormsModule,
     IgxInputGroupModule,
     IgxNavigationDrawerModule
