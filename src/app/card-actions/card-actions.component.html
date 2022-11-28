@@ -1,0 +1,50 @@
+<div class="row-layout group">
+  <igx-card type="outlined" *ngFor="let item of travelAppSelectedArticles" class="card">
+    <igx-card-media height="240px">
+      <img [src]="item.image_url" class="image" />
+    </igx-card-media>
+    <igx-card-header>
+      <h3 igxCardHeaderTitle>
+        Product Name
+      </h3>
+      <h5 igxCardHeaderSubtitle>
+        Department
+      </h5>
+    </igx-card-header>
+    <igx-card-content class="body-content">
+      <p class="text">
+        Here you can add some description of the product in more details
+      </p>
+    </igx-card-content>
+    <igx-card-actions [reverse]="true" class="actions-content">
+      <button igxButton="outlined" igxRipple class="button">
+        Edit
+      </button>
+      <button igxButton="icon" igxRipple class="button_1">
+        <igx-icon>
+          favorite
+        </igx-icon>
+      </button>
+      <button igxButton="icon" igxRipple class="button_1">
+        <igx-icon>
+          share
+        </igx-icon>
+      </button>
+    </igx-card-actions>
+  </igx-card>
+</div>
+<div class="column-layout group_1">
+  <h6 class="content">
+    Both issues REPRODUCED IN: Blazor and Web Components generated apps
+  </h6>
+  <div class="row-layout group_2">
+    <p class="igx-typography__subtitle-1 text_1">
+      If the positioning of the actions is reversed, when generated, Web Comp. and Blazor reverses them back to the original place.
+    </p>
+  </div>
+  <div class="row-layout group_2">
+    <p class="igx-typography__subtitle-1 content">
+      Action icons look justified, instead of being aligned to the left or right
+    </p>
+  </div>
+</div>

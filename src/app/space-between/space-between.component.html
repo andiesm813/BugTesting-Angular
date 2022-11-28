@@ -1,0 +1,45 @@
+<div class="column-layout group">
+  <div class="row-layout group_1">
+    <button igxButton="raised" igxRipple class="button">
+      Button
+    </button>
+    <button igxButton="flat" igxRipple [igxToggleAction]="dropdown1" class="button">
+      <span>With dropdown</span>
+      <igx-icon>
+        keyboard_arrow_down
+      </igx-icon>
+    </button>
+    <igx-drop-down #dropdown1 class="dropdown">
+      <igx-drop-down-item>
+        Option
+      </igx-drop-down-item>
+      <igx-drop-down-item>
+        Option
+      </igx-drop-down-item>
+    </igx-drop-down>
+  </div>
+  <div class="row-layout group_1">
+    <button igxButton="raised" igxRipple class="button">
+      Button
+    </button>
+    <button igxButton="flat" igxRipple class="button">
+      <span>Without dropdown</span>
+      <igx-icon>
+        keyboard_arrow_down
+      </igx-icon>
+    </button>
+  </div>
+</div>
+<div class="column-layout group_2">
+  <h6 class="content">
+    ISSUES
+  </h6>
+  <div class="row-layout group_3">
+    <p class="igx-typography__subtitle-1 content">
+      If a container, with 2 inner elements, has horizontal alignment set to space between, if one of the elements has a dropdown, the space between is altered, since it's considering the dropdown as a 3rd item.
+    </p>
+    <h6 class="content">
+      REPRODUCED IN: AppBuilder Edit &amp; Preview, Blazor
+    </h6>
+  </div>
+</div>

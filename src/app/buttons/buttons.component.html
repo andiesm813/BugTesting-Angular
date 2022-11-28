@@ -1,0 +1,71 @@
+<div class="row-layout group">
+  <button igxButton="raised" igxRipple class="button">
+    Button
+  </button>
+  <button igxButton="raised" igxRipple class="button">
+    <igx-icon>
+      add
+    </igx-icon>
+    <span>Button</span>
+  </button>
+  <button igxButton="outlined" igxRipple class="button_1">
+    Button
+  </button>
+  <button igxButton="outlined" igxRipple class="button_1">
+    <igx-icon>
+      add
+    </igx-icon>
+    <span>Button</span>
+  </button>
+  <button igxButton="flat" igxRipple class="button_1">
+    Button
+  </button>
+  <button igxButton="flat" igxRipple class="button_1">
+    <igx-icon>
+      add
+    </igx-icon>
+    <span>Button</span>
+  </button>
+  <button igxButton="flat" igxRipple [igxToggleAction]="dropdown" class="button_1">
+    <span>With dropdown</span>
+    <igx-icon>
+      keyboard_arrow_down
+    </igx-icon>
+  </button>
+  <igx-drop-down #dropdown class="dropdown">
+    <igx-drop-down-item>
+      Option
+    </igx-drop-down-item>
+  </igx-drop-down>
+</div>
+<div class="column-layout group_1">
+  <h6 class="content">
+    ISSUES
+  </h6>
+  <div class="row-layout group_2">
+    <p class="igx-typography__subtitle-1 content">
+      When a button with RAISED type has the icon switched turned on, it grows 2px in height
+    </p>
+    <h6 class="content">
+      REPRODUCED IN: AppBuilder Edit &amp; Preview and Angular generated app
+    </h6>
+  </div>
+  <div class="row-layout group_2">
+    <p class="igx-typography__subtitle-1 content">
+      Button's INNER PADDING in the generated apps is lacking, so they look smaller than Angular.
+    </p>
+    <h6 class="content">
+      REPRODUCED IN: Blazor and Web Components generated apps
+    </h6>
+  </div>
+</div>
+<div class="column-layout group_3">
+  <div class="row-layout group_2">
+    <p class="igx-typography__subtitle-1 content">
+      Outline and flat buttons have white text in Blazor and WebComponents
+    </p>
+    <h6 class="content">
+      NOT HAPPENING!!! (sample app issue?) 
+    </h6>
+  </div>
+</div>
