@@ -1,71 +1,174 @@
-<div class="row-layout group">
-  <button igxButton="raised" igxRipple class="button">
-    Button
-  </button>
-  <button igxButton="raised" igxRipple class="button">
-    <igx-icon>
-      add
-    </igx-icon>
-    <span>Button</span>
-  </button>
-  <button igxButton="outlined" igxRipple class="button_1">
-    Button
-  </button>
-  <button igxButton="outlined" igxRipple class="button_1">
-    <igx-icon>
-      add
-    </igx-icon>
-    <span>Button</span>
-  </button>
-  <button igxButton="flat" igxRipple class="button_1">
-    Button
-  </button>
-  <button igxButton="flat" igxRipple class="button_1">
-    <igx-icon>
-      add
-    </igx-icon>
-    <span>Button</span>
-  </button>
-  <button igxButton="flat" igxRipple [igxToggleAction]="dropdown" class="button_1">
-    <span>With dropdown</span>
-    <igx-icon>
-      keyboard_arrow_down
-    </igx-icon>
-  </button>
-  <igx-drop-down #dropdown class="dropdown">
-    <igx-drop-down-item>
-      Option
-    </igx-drop-down-item>
-  </igx-drop-down>
+<igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" #defaultDialog>
+  <igx-dialog-title>
+    <h5>
+      Confirmation
+    </h5>
+  </igx-dialog-title>
+  <ng-container>
+    <p>Are you sure you want to do this?</p>
+  </ng-container>
+  <igx-dialog-actions>
+    <button igxButton="flat" igxRipple [igxToggleAction]="defaultDialog">Cancel</button>
+    <button igxButton="flat" igxRipple [igxToggleAction]="defaultDialog">OK</button>
+  </igx-dialog-actions>
+</igx-dialog>
+<igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" #customDialog>
+  <igx-dialog-title>
+    <h5>
+      Confirmation
+    </h5>
+  </igx-dialog-title>
+  <ng-container>
+    <div class="row-layout group">
+      <p class="text"></p>
+      <button igxButton="raised" igxRipple class="button">
+        Button
+      </button>
+    </div>
+  </ng-container>
+  <igx-dialog-actions>
+    <button igxButton="flat" igxRipple class="user-input">
+      Button
+    </button>
+    <button igxButton="raised" igxRipple class="user-input">
+      Button
+    </button>
+  </igx-dialog-actions>
+</igx-dialog>
+<div class="row-layout group_1">
+  <div class="row-layout group_2">
+    <button igxButton="raised" igxRipple class="button">
+      Button
+    </button>
+    <button igxButton="raised" igxRipple class="button_2">
+      <igx-icon>
+        add
+      </igx-icon>
+      <span>Button</span>
+    </button>
+    <button igxButton="outlined" igxRipple class="button">
+      Button
+    </button>
+    <button igxButton="outlined" igxRipple class="button">
+      <igx-icon>
+        add
+      </igx-icon>
+      <span>Button</span>
+    </button>
+    <button igxButton="flat" igxRipple class="button">
+      Button
+    </button>
+    <button igxButton="flat" igxRipple class="button">
+      <igx-icon>
+        add
+      </igx-icon>
+      <span>Button</span>
+    </button>
+    <button igxButton="flat" igxRipple [igxToggleAction]="dropdown" class="button">
+      <span>With dropdown</span>
+      <igx-icon>
+        keyboard_arrow_down
+      </igx-icon>
+    </button>
+    <igx-drop-down #dropdown class="user-input">
+      <igx-drop-down-item>
+        Option
+      </igx-drop-down-item>
+    </igx-drop-down>
+  </div>
+  <div class="row-layout group_3">
+    <igx-list class="list">
+      <igx-list-item [isHeader]="false">
+        <span igxListThumbnail>
+          <igx-avatar icon="person" [roundShape]="true" class="avatar"></igx-avatar>
+        </span>
+        <span igxListLineTitle>Title goes here</span>
+        <span igxListLineSubTitle>Subtitle...</span>
+        <span igxListLine>
+          <button igxButton="raised" igxRipple class="user-input">
+            Button
+          </button>
+        </span>
+        <span igxListAction>
+          <igx-icon class="icon">
+            star
+          </igx-icon>
+        </span>
+      </igx-list-item>
+    </igx-list>
+    <igx-card type="outlined" class="card">
+      <igx-card-header>
+        <h3 igxCardHeaderTitle>
+          Title goes here...
+        </h3>
+        <h5 igxCardHeaderSubtitle>
+          Subtitle goes here...
+        </h5>
+      </igx-card-header>
+      <igx-card-content class="body-content">
+        <div class="row-layout group">
+          <button igxButton="outlined" igxRipple class="button">
+            Button
+          </button>
+        </div>
+      </igx-card-content>
+      <igx-card-actions class="actions-content">
+        <button igxButton="flat" igxRipple class="user-input">
+          Button
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            favorite
+          </igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            bookmark
+          </igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            share
+          </igx-icon>
+        </button>
+      </igx-card-actions>
+    </igx-card>
+    <div class="column-layout group_4">
+      <button igxButton="raised" igxRipple [igxToggleAction]="defaultDialog" class="user-input">
+        Default dialog
+      </button>
+      <button igxButton="raised" igxRipple [igxToggleAction]="customDialog" class="user-input">
+        Custom Dialog
+      </button>
+    </div>
+  </div>
 </div>
-<div class="column-layout group_1">
+<div class="column-layout group_5">
   <h6 class="content">
     ISSUES
   </h6>
-  <div class="row-layout group_2">
+  <div class="row-layout group_6">
     <p class="igx-typography__subtitle-1 content">
       When a button with RAISED type has the icon switched turned on, it grows 2px in height
     </p>
     <h6 class="content">
-      REPRODUCED IN: AppBuilder Edit &amp; Preview and Angular generated app
+      REPRODUCED IN: AppBuilder Edit &amp; Preview and Angular app
     </h6>
   </div>
-  <div class="row-layout group_2">
+  <div class="row-layout group_6">
     <p class="igx-typography__subtitle-1 content">
       Button's INNER PADDING in the generated apps is lacking, so they look smaller than Angular.
     </p>
     <h6 class="content">
-      REPRODUCED IN: Blazor and Web Components generated apps
+      REPRODUCED IN: Blazor and Web Components apps
     </h6>
   </div>
-</div>
-<div class="column-layout group_3">
-  <div class="row-layout group_2">
-    <p class="igx-typography__subtitle-1 content">
-      Outline and flat buttons have white text in Blazor and WebComponents
+  <div class="row-layout group_6">
+    <p class="igx-typography__subtitle-1 text_1">
+      When i change the foreground color of just ONE button, all the buttons get changed their foregrounds, except if they are part of a component. The only exception to this is if the button is inside the content of a card.
     </p>
     <h6 class="content">
-      NOT HAPPENING!!! (sample app issue?) 
+      REPRODUCED IN: Blazor and Web Components apps
     </h6>
   </div>
 </div>
