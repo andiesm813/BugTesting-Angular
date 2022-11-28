@@ -1,46 +1,9 @@
-<igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" #defaultDialog>
-  <igx-dialog-title>
-    <h5>
-      Confirmation
-    </h5>
-  </igx-dialog-title>
-  <ng-container>
-    <p>Are you sure you want to do this?</p>
-  </ng-container>
-  <igx-dialog-actions>
-    <button igxButton="flat" igxRipple [igxToggleAction]="defaultDialog">Cancel</button>
-    <button igxButton="flat" igxRipple [igxToggleAction]="defaultDialog">OK</button>
-  </igx-dialog-actions>
-</igx-dialog>
-<igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" #customDialog>
-  <igx-dialog-title>
-    <h5>
-      Confirmation
-    </h5>
-  </igx-dialog-title>
-  <ng-container>
-    <div class="row-layout group">
-      <p class="text"></p>
-      <button igxButton="raised" igxRipple class="button">
-        Button
-      </button>
-    </div>
-  </ng-container>
-  <igx-dialog-actions>
-    <button igxButton="flat" igxRipple class="user-input">
-      Button
-    </button>
-    <button igxButton="raised" igxRipple class="user-input">
-      Button
-    </button>
-  </igx-dialog-actions>
-</igx-dialog>
-<div class="row-layout group_1">
-  <div class="row-layout group_2">
+<div class="row-layout group">
+  <div class="row-layout group_1">
     <button igxButton="raised" igxRipple class="button">
       Button
     </button>
-    <button igxButton="raised" igxRipple class="button_2">
+    <button igxButton="raised" igxRipple class="button_1">
       <igx-icon>
         add
       </igx-icon>
@@ -75,8 +38,40 @@
         Option
       </igx-drop-down-item>
     </igx-drop-down>
+    <igx-card type="outlined" class="card">
+      <igx-card-header>
+        <h3 igxCardHeaderTitle>
+          Card Title
+        </h3>
+        <h5 igxCardHeaderSubtitle>
+          This is the card subtitle
+        </h5>
+      </igx-card-header>
+      <igx-card-content class="body-content">
+        <div class="column-layout custom-content-1">
+          <button igxButton="outlined" igxRipple class="user-input">
+            Button
+          </button>
+        </div>
+      </igx-card-content>
+      <igx-card-actions [reverse]="true" class="actions-content">
+        <button igxButton="outlined" igxRipple class="user-input">
+          Button
+        </button>
+        <button igxButton="icon" igxRipple class="button_2">
+          <igx-icon>
+            favorite
+          </igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple class="button_2">
+          <igx-icon>
+            share
+          </igx-icon>
+        </button>
+      </igx-card-actions>
+    </igx-card>
   </div>
-  <div class="row-layout group_3">
+  <div class="row-layout group_2">
     <igx-list class="list">
       <igx-list-item [isHeader]="false">
         <span igxListThumbnail>
@@ -97,43 +92,41 @@
       </igx-list-item>
     </igx-list>
     <igx-card type="outlined" class="card">
+      <igx-card-media height="148px">
+        <img src="/assets/design system.png" class="image" />
+      </igx-card-media>
       <igx-card-header>
         <h3 igxCardHeaderTitle>
-          Title goes here...
+          Card Title
         </h3>
         <h5 igxCardHeaderSubtitle>
-          Subtitle goes here...
+          This is the card subtitle
         </h5>
       </igx-card-header>
       <igx-card-content class="body-content">
-        <div class="row-layout group">
-          <button igxButton="outlined" igxRipple class="button">
+        <div class="column-layout custom-content-1">
+          <button igxButton="outlined" igxRipple class="user-input">
             Button
           </button>
         </div>
       </igx-card-content>
-      <igx-card-actions class="actions-content">
-        <button igxButton="flat" igxRipple class="user-input">
+      <igx-card-actions [reverse]="true" class="actions-content">
+        <button igxButton="outlined" igxRipple class="user-input">
           Button
         </button>
-        <button igxButton="icon" igxRipple>
+        <button igxButton="icon" igxRipple class="button_2">
           <igx-icon>
             favorite
           </igx-icon>
         </button>
-        <button igxButton="icon" igxRipple>
-          <igx-icon>
-            bookmark
-          </igx-icon>
-        </button>
-        <button igxButton="icon" igxRipple>
+        <button igxButton="icon" igxRipple class="button_2">
           <igx-icon>
             share
           </igx-icon>
         </button>
       </igx-card-actions>
     </igx-card>
-    <div class="column-layout group_4">
+    <div class="column-layout custom-content-1">
       <button igxButton="raised" igxRipple [igxToggleAction]="defaultDialog" class="user-input">
         Default dialog
       </button>
@@ -143,11 +136,11 @@
     </div>
   </div>
 </div>
-<div class="column-layout group_5">
+<div class="column-layout group_3">
   <h6 class="content">
     ISSUES
   </h6>
-  <div class="row-layout group_6">
+  <div class="row-layout group_4">
     <p class="igx-typography__subtitle-1 content">
       When a button with RAISED type has the icon switched turned on, it grows 2px in height
     </p>
@@ -155,7 +148,7 @@
       REPRODUCED IN: AppBuilder Edit &amp; Preview and Angular app
     </h6>
   </div>
-  <div class="row-layout group_6">
+  <div class="row-layout group_4">
     <p class="igx-typography__subtitle-1 content">
       Button's INNER PADDING in the generated apps is lacking, so they look smaller than Angular.
     </p>
@@ -163,8 +156,8 @@
       REPRODUCED IN: Blazor and Web Components apps
     </h6>
   </div>
-  <div class="row-layout group_6">
-    <p class="igx-typography__subtitle-1 text_1">
+  <div class="row-layout group_4">
+    <p class="igx-typography__subtitle-1 text">
       When i change the foreground color of just ONE button, all the buttons get changed their foregrounds, except if they are part of a component. The only exception to this is if the button is inside the content of a card.
     </p>
     <h6 class="content">
@@ -172,3 +165,40 @@
     </h6>
   </div>
 </div>
+<igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" #defaultDialog>
+  <igx-dialog-title>
+    <h5>
+      Confirmation
+    </h5>
+  </igx-dialog-title>
+  <ng-container>
+    <p>Are you sure you want to do this?</p>
+  </ng-container>
+  <igx-dialog-actions>
+    <button igxButton="flat" igxRipple [igxToggleAction]="defaultDialog">Cancel</button>
+    <button igxButton="flat" igxRipple [igxToggleAction]="defaultDialog">OK</button>
+  </igx-dialog-actions>
+</igx-dialog>
+<igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" #customDialog>
+  <igx-dialog-title>
+    <h5>
+      Confirmation
+    </h5>
+  </igx-dialog-title>
+  <ng-container>
+    <div class="row-layout group_5">
+      <p class="text_1"></p>
+      <button igxButton="raised" igxRipple class="button">
+        Button
+      </button>
+    </div>
+  </ng-container>
+  <igx-dialog-actions>
+    <button igxButton="flat" igxRipple class="user-input">
+      Button
+    </button>
+    <button igxButton="raised" igxRipple class="user-input">
+      Button
+    </button>
+  </igx-dialog-actions>
+</igx-dialog>
