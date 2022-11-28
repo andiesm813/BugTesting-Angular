@@ -1,10 +1,111 @@
-<div class="row-layout group">
+<div class="column-layout group">
   <button igxButton="raised" igxRipple [igxToggleAction]="simpleDialog" class="user-input">
     DIALOG JUST BUTTONS
   </button>
   <button igxButton="raised" igxRipple [igxToggleAction]="dialogMinWidth" class="user-input">
     DIALOG WITH MIN WIDTH
   </button>
+  <div class="row-layout group_1">
+    <igx-card type="outlined" class="card">
+      <igx-card-media height="120px">
+        <img src="/assets/theme-light.svg" class="image" />
+      </igx-card-media>
+      <igx-card-header>
+        <h3 igxCardHeaderTitle>
+          Cards purpose
+        </h3>
+        <h5 igxCardHeaderSubtitle>
+          has issues
+        </h5>
+      </igx-card-header>
+      <igx-card-actions class="actions-content">
+        <button igxButton="flat" igxRipple class="user-input">
+          Button
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            favorite
+          </igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            bookmark
+          </igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            share
+          </igx-icon>
+        </button>
+      </igx-card-actions>
+    </igx-card>
+    <igx-card type="outlined" class="card">
+      <igx-card-media height="120px">
+        <img src="/assets/theme-dark.svg" class="image" />
+      </igx-card-media>
+      <igx-card-header>
+        <h3 igxCardHeaderTitle>
+          Is to show how
+        </h3>
+        <h5 igxCardHeaderSubtitle>
+          in web components
+        </h5>
+      </igx-card-header>
+      <igx-card-actions class="actions-content">
+        <button igxButton="flat" igxRipple class="user-input">
+          Button
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            favorite
+          </igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            bookmark
+          </igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            share
+          </igx-icon>
+        </button>
+      </igx-card-actions>
+    </igx-card>
+    <igx-card type="outlined" class="card">
+      <igx-card-media height="120px">
+        <img src="/assets/design system.png" class="image" />
+      </igx-card-media>
+      <igx-card-header>
+        <h3 igxCardHeaderTitle>
+          The overlay
+        </h3>
+        <h5 igxCardHeaderSubtitle>
+          when the app is generated
+        </h5>
+      </igx-card-header>
+      <igx-card-actions class="actions-content">
+        <button igxButton="flat" igxRipple class="user-input">
+          Button
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            favorite
+          </igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            bookmark
+          </igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>
+            share
+          </igx-icon>
+        </button>
+      </igx-card-actions>
+    </igx-card>
+  </div>
 </div>
 <igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" #dialogMinWidth>
   <igx-dialog-title>
@@ -13,26 +114,26 @@
     </h5>
   </igx-dialog-title>
   <ng-container>
-    <div class="column-layout group_1">
+    <div class="column-layout group_2">
       <h5 class="content"></h5>
-      <igx-input-group type="box" class="user-input_1">
+      <igx-input-group type="box" class="user-input">
         <input type="text" igxInput />
         <label igxLabel>Label/Placeholder</label>
       </igx-input-group>
-      <igx-input-group type="box" class="user-input_1">
+      <igx-input-group type="box" class="user-input">
         <input type="text" igxInput />
         <label igxLabel>Label/Placeholder</label>
       </igx-input-group>
-      <div class="row-layout group_2">
-        <igx-input-group type="box" class="user-input">
+      <div class="row-layout group_1">
+        <igx-input-group type="box" class="input">
           <input type="text" igxInput />
           <label igxLabel>Label/Placeholder</label>
         </igx-input-group>
-        <igx-input-group type="box" class="user-input">
+        <igx-input-group type="box" class="input">
           <input type="text" igxInput />
           <label igxLabel>Label/Placeholder</label>
         </igx-input-group>
-        <igx-input-group type="box" class="user-input">
+        <igx-input-group type="box" class="input">
           <input type="text" igxInput />
           <label igxLabel>Label/Placeholder</label>
         </igx-input-group>
@@ -40,10 +141,10 @@
     </div>
   </ng-container>
   <igx-dialog-actions>
-    <button igxButton="raised" igxRipple class="user-input_1">
+    <button igxButton="raised" igxRipple class="user-input">
       Add Product
     </button>
-    <button igxButton="flat" igxRipple class="user-input_1">
+    <button igxButton="flat" igxRipple class="user-input">
       Cancel
     </button>
   </igx-dialog-actions>
@@ -58,10 +159,10 @@
     <p class="content"></p>
   </ng-container>
   <igx-dialog-actions>
-    <button igxButton="raised" igxRipple class="user-input_1">
+    <button igxButton="raised" igxRipple class="user-input">
       ADD PRODUCT
     </button>
-    <button igxButton="outlined" igxRipple class="user-input_1">
+    <button igxButton="outlined" igxRipple class="user-input">
       CANCEL
     </button>
   </igx-dialog-actions>
