@@ -30,25 +30,6 @@
   position: relative;
   min-width: 50px;
 }
-.card {
-  height: max-content;
-  min-width: 240px;
-  max-width: 320px;
-  flex-shrink: 0;
-}
-.column-layout {
-  display: flex;
-  flex-direction: column;
-}
-.custom-content-1 {
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: flex-start;
-  gap: 16px;
-  position: relative;
-  min-width: 50px;
-  min-height: 50px;
-}
 .group_2 {
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -59,7 +40,26 @@
   min-width: 50px;
   min-height: 50px;
 }
+.card {
+  height: max-content;
+  min-width: 240px;
+  max-width: 320px;
+  flex-shrink: 0;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
 .group_3 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_4 {
   background-color: hsla(var(--igx-secondary-800));
   justify-content: flex-start;
   align-items: stretch;
@@ -70,7 +70,7 @@
   min-width: 50px;
   min-height: 50px;
 }
-.group_4 {
+.group_5 {
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
@@ -78,7 +78,7 @@
   position: relative;
   min-width: 50px;
 }
-.group_5 {
+.group_6 {
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
@@ -120,9 +120,6 @@
   width: 24px;
   height: 24px;
 }
-.image {
-  height: 100%;
-}
 .content {
   color: hsla(var(--igx-surface-500));
   height: max-content;
@@ -141,4 +138,8 @@
 .list {
   height: max-content;
   flex-shrink: 0;
+}
+.badge {
+  width: max-content;
+  height: max-content;
 }

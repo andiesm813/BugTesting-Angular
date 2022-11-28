@@ -38,38 +38,6 @@
         Option
       </igx-drop-down-item>
     </igx-drop-down>
-    <igx-card type="outlined" class="card">
-      <igx-card-header>
-        <h3 igxCardHeaderTitle>
-          Card Title
-        </h3>
-        <h5 igxCardHeaderSubtitle>
-          This is the card subtitle
-        </h5>
-      </igx-card-header>
-      <igx-card-content class="body-content">
-        <div class="column-layout custom-content-1">
-          <button igxButton="outlined" igxRipple class="user-input">
-            Button
-          </button>
-        </div>
-      </igx-card-content>
-      <igx-card-actions [reverse]="true" class="actions-content">
-        <button igxButton="outlined" igxRipple class="user-input">
-          Button
-        </button>
-        <button igxButton="icon" igxRipple class="button_2">
-          <igx-icon>
-            favorite
-          </igx-icon>
-        </button>
-        <button igxButton="icon" igxRipple class="button_2">
-          <igx-icon>
-            share
-          </igx-icon>
-        </button>
-      </igx-card-actions>
-    </igx-card>
   </div>
   <div class="row-layout group_2">
     <igx-list class="list">
@@ -92,9 +60,6 @@
       </igx-list-item>
     </igx-list>
     <igx-card type="outlined" class="card">
-      <igx-card-media height="148px">
-        <img src="/assets/design system.png" class="image" />
-      </igx-card-media>
       <igx-card-header>
         <h3 igxCardHeaderTitle>
           Card Title
@@ -104,9 +69,12 @@
         </h5>
       </igx-card-header>
       <igx-card-content class="body-content">
-        <div class="column-layout custom-content-1">
+        <div class="column-layout group_3">
+          <button igxButton="raised" igxRipple class="user-input">
+            Button IN CONTENT
+          </button>
           <button igxButton="outlined" igxRipple class="user-input">
-            Button
+            BUTTON IN CONTENT
           </button>
         </div>
       </igx-card-content>
@@ -124,9 +92,12 @@
             share
           </igx-icon>
         </button>
+        <button igxButton="raised" igxRipple class="user-input">
+          Button
+        </button>
       </igx-card-actions>
     </igx-card>
-    <div class="column-layout custom-content-1">
+    <div class="column-layout group_3">
       <button igxButton="raised" igxRipple [igxToggleAction]="defaultDialog" class="user-input">
         Default dialog
       </button>
@@ -136,19 +107,20 @@
     </div>
   </div>
 </div>
-<div class="column-layout group_3">
+<div class="column-layout group_4">
   <h6 class="content">
     ISSUES
   </h6>
-  <div class="row-layout group_4">
+  <div class="row-layout group_5">
     <p class="igx-typography__subtitle-1 content">
-      When a button with RAISED type has the icon switched turned on, it grows 2px in height
+      When a button with RAISED or FLAT type has the icon switched turned on, it grows 2px in height
     </p>
     <h6 class="content">
       REPRODUCED IN: AppBuilder Edit &amp; Preview and Angular app
     </h6>
+    <igx-badge type="info" value="BUG CREATED" class="badge"></igx-badge>
   </div>
-  <div class="row-layout group_4">
+  <div class="row-layout group_5">
     <p class="igx-typography__subtitle-1 content">
       Button's INNER PADDING in the generated apps is lacking, so they look smaller than Angular.
     </p>
@@ -156,9 +128,9 @@
       REPRODUCED IN: Blazor and Web Components apps
     </h6>
   </div>
-  <div class="row-layout group_4">
+  <div class="row-layout group_5">
     <p class="igx-typography__subtitle-1 text">
-      When i change the foreground color of just ONE button, all the buttons get changed their foregrounds, except if they are part of a component. The only exception to this is if the button is inside the content of a card.
+      When i change the foreground color of just ONE button, all the buttons get changed their foregrounds, except if they are part of a component.
     </p>
     <h6 class="content">
       REPRODUCED IN: Blazor and Web Components apps
@@ -186,7 +158,7 @@
     </h5>
   </igx-dialog-title>
   <ng-container>
-    <div class="row-layout group_5">
+    <div class="row-layout group_6">
       <p class="text_1"></p>
       <button igxButton="raised" igxRipple class="button">
         Button
