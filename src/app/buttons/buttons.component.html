@@ -1,5 +1,5 @@
-<div class="row-layout group">
-  <div [igxToggleAction]="dropdown" class="row-layout group_1">
+<div class="column-layout group">
+  <div class="row-layout buttons">
     <button igxButton="raised" igxRipple class="button">
       Button
     </button>
@@ -27,7 +27,7 @@
       </igx-icon>
       <span>Button</span>
     </button>
-    <button igxButton="flat" igxRipple class="button">
+    <button igxButton="flat" igxRipple [igxToggleAction]="dropdown" class="button">
       <span>With dropdown</span>
       <igx-icon>
         keyboard_arrow_down
@@ -39,7 +39,7 @@
       </igx-drop-down-item>
     </igx-drop-down>
   </div>
-  <div class="row-layout group_2">
+  <div class="row-layout group_1">
     <igx-list class="list">
       <igx-list-item [isHeader]="false">
         <span igxListThumbnail>
@@ -62,108 +62,51 @@
     <igx-card type="outlined" class="card">
       <igx-card-header>
         <h3 igxCardHeaderTitle>
-          Card Title
+          Title goes here...
         </h3>
         <h5 igxCardHeaderSubtitle>
-          This is the card subtitle
+          Subtitle goes here...
         </h5>
       </igx-card-header>
       <igx-card-content class="body-content">
-        <div class="column-layout group_3">
+        <div class="column-layout group_2">
           <button igxButton="raised" igxRipple class="user-input">
-            Button IN CONTENT
+            Button in content
           </button>
           <button igxButton="outlined" igxRipple class="user-input">
-            BUTTON IN CONTENT
+            Button in content
           </button>
         </div>
       </igx-card-content>
       <igx-card-actions [reverse]="true" class="actions-content">
-        <button igxButton="outlined" igxRipple class="user-input">
+        <button igxButton="flat" igxRipple class="user-input">
           Button
-        </button>
-        <button igxButton="icon" igxRipple class="button_2">
-          <igx-icon>
-            favorite
-          </igx-icon>
-        </button>
-        <button igxButton="icon" igxRipple class="button_2">
-          <igx-icon>
-            share
-          </igx-icon>
         </button>
         <button igxButton="raised" igxRipple class="user-input">
           Button
         </button>
       </igx-card-actions>
     </igx-card>
-    <div class="column-layout group_3">
-      <button igxButton="raised" igxRipple class="user-input">
-        Default dialog
-      </button>
-      <button igxButton="raised" igxRipple class="user-input">
-        Custom Dialog
+    <div class="column-layout group_2">
+      <button igxButton="raised" igxRipple [igxToggleAction]="customDialog" class="user-input">
+        Custom dialog
       </button>
     </div>
   </div>
 </div>
-<div class="column-layout group_4">
-  <h6 class="content">
-    ISSUES
-  </h6>
-  <div class="row-layout group_5">
-    <p class="igx-typography__subtitle-1 content">
-      When a button with RAISED or FLAT type has the icon switched turned on, it grows 2px in height
-    </p>
-    <h6 class="content">
-      REPRODUCED IN: AppBuilder Edit &amp; Preview and Angular app
-    </h6>
-    <igx-badge type="info" value="BUG CREATED" class="badge"></igx-badge>
-  </div>
-  <div class="row-layout group_5">
-    <p class="igx-typography__subtitle-1 content">
-      Button's INNER PADDING in the generated apps is lacking, so they look smaller than Angular.
-    </p>
-    <h6 class="content">
-      REPRODUCED IN: Blazor and Web Components apps
-    </h6>
-    <igx-badge type="info" value="BUG CREATED" class="badge"></igx-badge>
-  </div>
-  <div class="row-layout group_5">
-    <p class="igx-typography__subtitle-1 text">
-      When i change the foreground color of just ONE button, all the buttons get changed their foregrounds, except if they are part of a component. With the exception of buttons placed in custom dialog window content.
-    </p>
-    <h6 class="content">
-      REPRODUCED IN: Blazor and Web Components apps
-    </h6>
-    <igx-badge type="info" value="BUG CREATED" class="badge"></igx-badge>
-  </div>
-</div>
-<igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" #defaultDialog>
+<igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" #customDialog>
   <igx-dialog-title>
     <h5>
       Confirmation
     </h5>
   </igx-dialog-title>
   <ng-container>
-    <p>Are you sure you want to do this?</p>
-  </ng-container>
-  <igx-dialog-actions>
-    <button igxButton="flat" igxRipple [igxToggleAction]="defaultDialog">Cancel</button>
-    <button igxButton="flat" igxRipple [igxToggleAction]="defaultDialog">OK</button>
-  </igx-dialog-actions>
-</igx-dialog>
-<igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true">
-  <igx-dialog-title>
-    <h5>
-      Confirmation
-    </h5>
-  </igx-dialog-title>
-  <ng-container>
-    <div class="row-layout group_6">
-      <p class="text_1"></p>
-      <button igxButton="raised" igxRipple class="button">
-        Button
+    <div class="column-layout group_2">
+      <button igxButton="raised" igxRipple class="user-input">
+        Button in content
+      </button>
+      <button igxButton="outlined" igxRipple class="user-input">
+        Button in content
       </button>
     </div>
   </ng-container>
@@ -176,3 +119,35 @@
     </button>
   </igx-dialog-actions>
 </igx-dialog>
+<div class="column-layout group_3">
+  <h6 class="h6">
+    ISSUES
+  </h6>
+  <div class="row-layout group_4">
+    <p class="igx-typography__subtitle-1 text">
+      When a button with RAISED or FLAT type has the icon switched turned on, it grows 2px in height
+    </p>
+    <h6 class="h6">
+      REPRODUCED IN: AppBuilder Edit/Preview and Angular app
+    </h6>
+    <igx-badge type="success" value="BUG CREATED" class="badge"></igx-badge>
+  </div>
+  <div class="row-layout group_4">
+    <p class="igx-typography__subtitle-1 text">
+      Button's INNER PADDING in the generated apps is lacking, so they look smaller than Angular
+    </p>
+    <h6 class="h6">
+      REPRODUCED IN: Blazor and Web Components apps
+    </h6>
+    <igx-badge type="success" value="BUG CREATED" class="badge"></igx-badge>
+  </div>
+  <div class="row-layout group_4">
+    <p class="igx-typography__subtitle-1 text">
+      When i change the foreground color of just ONE button, all the buttons get changed their foregrounds, except if they are part of a component. With the exception of buttons placed in custom dialog window content
+    </p>
+    <h6 class="h6">
+      REPRODUCED IN: Blazor and Web Components apps
+    </h6>
+    <igx-badge type="success" value="BUG CREATED" class="badge"></igx-badge>
+  </div>
+</div>

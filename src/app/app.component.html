@@ -1,37 +1,53 @@
-<igx-nav-drawer [isOpen]="true" [pin]="true" [pinThreshold]="1024" width="240px" class="nav-drawer">
-  <ng-template igxDrawer>
-    <div igxDrawerItem igxRipple routerLink="/buttons">
-      <igx-icon class="icon">
-        bug_report
+<igx-navbar class="navbar">
+  <igx-navbar-action>
+    <button igxButton="icon" igxRipple [igxToggleAction]="navDrawer" class="button">
+      <igx-icon>
+        menu
       </igx-icon>
-      <span>Buttons</span>
-    </div>
-    <div igxDrawerItem igxRipple routerLink="/space-between">
-      <igx-icon class="icon">
-        bug_report
-      </igx-icon>
-      <span>Space Between</span>
-    </div>
-    <div igxDrawerItem igxRipple routerLink="/cards-opacity">
-      <igx-icon class="icon">
-        bug_report
-      </igx-icon>
-      <span>Cards Opacity</span>
-    </div>
-    <div igxDrawerItem igxRipple routerLink="/card-actions">
-      <igx-icon class="icon">
-        bug_report
-      </igx-icon>
-      <span>Card Action Buttons</span>
-    </div>
-    <div igxDrawerItem igxRipple routerLink="/dialog">
-      <igx-icon class="icon">
-        bug_report
-      </igx-icon>
-      <span>Dialogs</span>
-    </div>
-  </ng-template>
-</igx-nav-drawer>
-<div class="view-container">
-  <router-outlet></router-outlet>
+    </button>
+  </igx-navbar-action>
+  <igx-navbar-title>
+    <p class="igx-typography__subtitle-2 text">
+      BUGS IN SAMPLES
+    </p>
+  </igx-navbar-title>
+</igx-navbar>
+<div class="row-layout group">
+  <igx-nav-drawer [isOpen]="true" [pin]="true" [pinThreshold]="1024" width="240px" #navDrawer class="nav-drawer">
+    <ng-template igxDrawer>
+      <div igxDrawerItem igxRipple routerLink="/buttons">
+        <igx-icon class="icon">
+          bug_report
+        </igx-icon>
+        <span>Buttons</span>
+      </div>
+      <div igxDrawerItem igxRipple routerLink="/space-between">
+        <igx-icon class="icon">
+          bug_report
+        </igx-icon>
+        <span>Space Between</span>
+      </div>
+      <div igxDrawerItem igxRipple routerLink="/cards-opacity">
+        <igx-icon class="icon">
+          bug_report
+        </igx-icon>
+        <span>Cards Opacity</span>
+      </div>
+      <div igxDrawerItem igxRipple routerLink="/card-actions">
+        <igx-icon class="icon">
+          bug_report
+        </igx-icon>
+        <span>Card Action Buttons</span>
+      </div>
+      <div igxDrawerItem igxRipple routerLink="/dialog">
+        <igx-icon class="icon">
+          bug_report
+        </igx-icon>
+        <span>Dialogs</span>
+      </div>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="view-container">
+    <router-outlet></router-outlet>
+  </div>
 </div>
