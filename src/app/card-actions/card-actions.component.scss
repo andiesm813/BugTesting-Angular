@@ -69,13 +69,6 @@
   color: hsla(var(--igx-grays-300));
   height: max-content;
   min-width: min-content;
-  flex-grow: 1;
-  flex-basis: 0;
-}
-.text_1 {
-  color: hsla(var(--igx-grays-300));
-  height: max-content;
-  min-width: min-content;
 }
 .button {
   height: max-content;
@@ -83,4 +76,8 @@
 }
 .button_1 {
   color: hsla(var(--igx-secondary-500));
+}
+.badge {
+  width: max-content;
+  height: max-content;
 }
