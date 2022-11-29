@@ -51,7 +51,7 @@
   min-height: 50px;
 }
 .group_2 {
-  background-color: hsla(var(--igx-secondary-800));
+  background-color: #24272B;
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
@@ -89,8 +89,13 @@
   height: max-content;
   min-width: min-content;
 }
-.content_1 {
+.h6 {
   color: hsla(var(--igx-surface-500));
+  height: max-content;
+  min-width: min-content;
+}
+.text {
+  color: hsla(var(--igx-grays-300));
   height: max-content;
   min-width: min-content;
 }

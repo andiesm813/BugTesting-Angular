@@ -43,7 +43,7 @@
   min-height: 50px;
 }
 .group {
-  background-color: hsla(var(--igx-secondary-800));
+  background-color: #24272B;
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
@@ -85,7 +85,7 @@
   min-width: min-content;
 }
 .text {
-  color: hsla(var(--igx-surface-500));
+  color: hsla(var(--igx-grays-300));
   width: 733px;
   height: max-content;
   min-width: min-content;

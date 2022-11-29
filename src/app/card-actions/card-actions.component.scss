@@ -34,7 +34,7 @@
   flex-direction: column;
 }
 .group {
-  background-color: hsla(var(--igx-secondary-800));
+  background-color: #24272B;
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
@@ -60,17 +60,22 @@
 .image {
   height: 100%;
 }
-.content {
+.h6 {
   color: hsla(var(--igx-surface-500));
   height: max-content;
   min-width: min-content;
 }
 .text {
-  color: hsla(var(--igx-surface-500));
+  color: hsla(var(--igx-grays-300));
   height: max-content;
   min-width: min-content;
   flex-grow: 1;
   flex-basis: 0;
+}
+.text_1 {
+  color: hsla(var(--igx-grays-300));
+  height: max-content;
+  min-width: min-content;
 }
 .button {
   height: max-content;
