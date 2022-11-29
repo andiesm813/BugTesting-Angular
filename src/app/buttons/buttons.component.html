@@ -1,5 +1,5 @@
 <div class="row-layout group">
-  <div class="row-layout group_1">
+  <div [igxToggleAction]="dropdown" class="row-layout group_1">
     <button igxButton="raised" igxRipple class="button">
       Button
     </button>
@@ -27,7 +27,7 @@
       </igx-icon>
       <span>Button</span>
     </button>
-    <button igxButton="flat" igxRipple [igxToggleAction]="dropdown" class="button">
+    <button igxButton="flat" igxRipple class="button">
       <span>With dropdown</span>
       <igx-icon>
         keyboard_arrow_down
@@ -98,10 +98,10 @@
       </igx-card-actions>
     </igx-card>
     <div class="column-layout group_3">
-      <button igxButton="raised" igxRipple [igxToggleAction]="defaultDialog" class="user-input">
+      <button igxButton="raised" igxRipple class="user-input">
         Default dialog
       </button>
-      <button igxButton="raised" igxRipple [igxToggleAction]="customDialog" class="user-input">
+      <button igxButton="raised" igxRipple class="user-input">
         Custom Dialog
       </button>
     </div>
@@ -127,14 +127,16 @@
     <h6 class="content">
       REPRODUCED IN: Blazor and Web Components apps
     </h6>
+    <igx-badge type="info" value="BUG CREATED" class="badge"></igx-badge>
   </div>
   <div class="row-layout group_5">
     <p class="igx-typography__subtitle-1 text">
-      When i change the foreground color of just ONE button, all the buttons get changed their foregrounds, except if they are part of a component.
+      When i change the foreground color of just ONE button, all the buttons get changed their foregrounds, except if they are part of a component. With the exception of buttons placed in custom dialog window content.
     </p>
     <h6 class="content">
       REPRODUCED IN: Blazor and Web Components apps
     </h6>
+    <igx-badge type="info" value="BUG CREATED" class="badge"></igx-badge>
   </div>
 </div>
 <igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" #defaultDialog>
@@ -151,7 +153,7 @@
     <button igxButton="flat" igxRipple [igxToggleAction]="defaultDialog">OK</button>
   </igx-dialog-actions>
 </igx-dialog>
-<igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" #customDialog>
+<igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true">
   <igx-dialog-title>
     <h5>
       Confirmation
